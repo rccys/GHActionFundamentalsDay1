@@ -46,10 +46,10 @@ jobs:
     environment: Load-Test
     steps:
       - run: |
-          echo "🧪 Testing..."
+          echo "🧪 Load Testing..."
           sleep 15
-          echo "MY_REPO_WORKFLOW_S"
-          echo "MY_REPO_WORKFLOW_V"
+          echo "MY_REPO_WORKFLOW_S: $MY_REPO_WORKFLOW_S"
+          echo "MY_REPO_WORKFLOW_V: $MY_REPO_WORKFLOW_V"
 
   Production:
     runs-on: ubuntu-latest
