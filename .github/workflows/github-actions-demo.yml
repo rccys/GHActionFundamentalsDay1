@@ -16,7 +16,7 @@ on:
         required: true
 env:
   MY_REPO_WORKFLOW_S: ${{secrets.MY_REPO_SECRET}}
-  MY_REPO_WORKFLOW_v: ${{vars.MY_REPO_VAR}}
+  MY_REPO_WORKFLOW_V: ${{vars.MY_REPO_VAR}}
 jobs:
   Build:
     runs-on: ubuntu-latest
