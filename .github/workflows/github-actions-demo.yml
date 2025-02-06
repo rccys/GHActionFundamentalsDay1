@@ -14,7 +14,9 @@ on:
         description: 'Environment to deploy to'
         type: environment
         required: true
-
+env:
+  MY_REPO_WORKFLOW_S: ${{secrets.MY_REPO_SECRET}}
+  MY_REPO_WORKFLOW_v: ${{vars.MY_REPO_VAR}}
 jobs:
   Build:
     runs-on: ubuntu-latest
@@ -46,6 +48,8 @@ jobs:
       - run: |
           echo "🧪 Testing..."
           sleep 15
+          echo "MY_REPO_WORKFLOW_S"
+          echo "MY_REPO_WORKFLOW_V"
 
   Production:
     runs-on: ubuntu-latest
